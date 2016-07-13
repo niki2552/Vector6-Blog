@@ -1,5 +1,9 @@
 ﻿.bt {
-    padding-left: 1300px;
+    padding-left: 1200px;
+}
+.bt a{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .bt input[type=submit] {
 	border: 1px solid rgba(0, 0, 0, 0.3);

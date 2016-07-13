@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="loginform cf">
+        <div class="form">
+            <form id="contactform">
+                <p class="contact"><label for="Username">UserName</label></p>
+                <input id="name" name="name" placeholder="UserName" required="" tabindex="1" type="text">
+
+                <p class="contact"><label for="email">Email</label></p>
+                <input id="email" name="email" placeholder="example@domain.com" required="" type="email">
+
+                <p class="contact"><label for="username">Create a username</label></p>
+                <input id="username" name="username" placeholder="username" required="" tabindex="2" type="text">
+
+                <p class="contact"><label for="password">Create a password</label></p>
+                <input type="password" id="password" name="password" placeholder="*************" required="">
+                <p class="contact"><label for="repassword">Confirm your password</label></p>
+                <input type="password" id="repassword" name="repassword" placeholder="*************" required="">
+
+                <fieldset>
+                    <label>Birthday</label>
+                    <label class="month">
+                        <select id="selectMonth" class="select-style" name="BirthMonth">
+                            <option value="">Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+
+                        <label class="day">
+                            <select id="selectDay" class="select-style" name="BirthDay">
+                                <option value="">Day</option>
+                                <script>
+                                    
+                                    for (var i = 1; i <= 31; i++) {
+                                        document.write('<option value="' + i + '">' + i + '</option>');
+                                    }
+                                </script>
+                            </select>
+                            <select id="year" name="year">
+                                <option value="">Year</option>
+                                <script>
+                                    var myDate = new Date();
+                                    for (var i = myDate.getFullYear(); i >= 1900; i--) {
+                                        document.write('<option value="' + i + '">' + i + '</option>');
+                                    }
+                                </script>
+                            </select>
+                        </label>
+                    </label>
+                </fieldset>
+                
+                <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!" type="submit">
+
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
