@@ -125,6 +125,7 @@ a:hover {
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
+	text-align: center
 }
 
 h2 {
@@ -278,7 +279,8 @@ dl,
 menu,
 ol,
 ul {
-    margin: 1em 0;
+    margin: 10px 0;
+	padding: auto,20px
 }
 
 dd {
