@@ -22,3 +22,23 @@
 	border-radius: 3px;
 	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
 }
+
+ .logo {
+      float: left;
+    }
+    .logo a {
+      display: inline-block;
+    }
+    .header {
+      margin: 10px 0;
+    }
+    .container{ direction: ltr }
+    .header-right .right{ float: right }
+    .header-right .right span{ margin-left: 20px }
+    .clear{ clear: both }
+    .nav-wil{
+
+float: right;
+margin-top:10px;
+
+}
