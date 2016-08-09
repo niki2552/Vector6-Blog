@@ -507,40 +507,46 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-#FitnessFood{
-
-}
-#ImagesFoods{
-    text-align: center;
-
-}
-#ImagesWorkouts{
-    text-align: center;
-}
 
 #HomePage {
     display: inline-block;
-    padding-left: 60px;
-
+    width: auto;
+    height: auto;
+    text-align: justify;
+    padding-left: 20px;
 }
-#SelectWorkout{
-    background: image("blog/Workouts/motivational-wallpaper-Motivational-Wallpaper-Workout.jpg");
-}
-ul.ListFoods  {
+ul.ListFoods{
+    display: inline-block;
     list-style-type: none;
-    font-size: large;
     background: none;
-    padding-left: 40px;
+    font-size: 16px;
 }
 ul.ListBodyWorkouts{
+    display: inline-block;
     list-style-type: none;
-    font-size: large;
     background: none;
-    padding-left: 40px;
+    font-size: 16px;
+
 }
-ul.ListTypeWorkowts{
+ul.ListTypeWorkouts{
+    display: inline-block;
     list-style-type: none;
-    font-size: large;
     background: none;
-    padding-left: 40px;
+    font-size: 16px;
+
+}
+h1.FitnessHeadline{
+    font-size: 42px;
+}
+h2.FitnessFoodAndDiets{
+    font-size: 28px;
+}
+h2.Workouts{
+    font-size: 28px;
+}
+h3.BWO{
+    font-size: 22px;
+}
+h3.TW{
+    font-size: 22px;
 }
