@@ -1,0 +1,4 @@
+﻿class PostController {
+    constructor (postView) {
+        
+    }
