@@ -5,20 +5,22 @@ body{
     background-color: #f0f0f0;
 }
 h1{
-    font-size: 36px;
+    font-size: 42px;
+    text-decoration: blink;
 }
 h2{
-    font-size: 28px;
+    font-size: 38px;
 }
 h3{
-    font-size: 28px;
+    font-size: 32px;
+    text-decoration: solid;
 }
 header{
-    background-color: #00795f;
     width: 100%;
     padding: 40px 0;
     color: white;
     text-align: center;
+    background-image: url("BodyWorkouts/fitness-background.jpg");
 }
 a{
     text-decoration: none;
@@ -50,7 +52,15 @@ section{
     padding: 40px;
     width: 60%;
     margin: 0 auto;
+    color: black;
 
+}
+div{
+    text-align: justify;
+}
+img{
+    width: 829px;
+    height: 620px;
 }
 .handle{
     width: 100%;
@@ -62,9 +72,41 @@ section{
     color: white;
     display:none;
 }
+
 form{
    text-align: center;
+    background-color:#aaa;
+    margin: 10px 10px 10px auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+footer{
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+
+}
+@media screen and (max-width:1300px){
+    nav ul{
+        max-width: 0;
+    }
+    .showing{
+        max-height: 20em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 10px;
+        text-align: left;
+    }
+    img{
+        width: 100%
+    }
+    .handle{
+        display: inline-block
+    }
 
 @media screen and (max-width:667px){
     nav ul{
@@ -105,7 +147,8 @@ form{
     .handle {
         display: inline-block;
     }
-    img{
-        width: 100%
+        img{
+            width: 100%
+        }
     }
 }
