@@ -58,7 +58,8 @@
 
     onRoute('#/posts/create', function () {
         // Show the new post page...
-        postController.showCreatePostPage();
+        let fullName = sessionStorage.getItem('fullName');
+        postController.showCreatePostPage(fullName,authService.isLogedIn());
     });
 
     bindEventHandler('login', function (ev, data) {
