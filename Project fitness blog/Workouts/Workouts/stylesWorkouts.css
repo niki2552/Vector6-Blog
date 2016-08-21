@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+h1{
+    font-size: 42px;
+    text-decoration: blink;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    font-size: 32px;
+    text-decoration: solid;
+}
+header{
+    width: 100%;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+    background-image: url("../BodyWorkouts/fitness-background.jpg");
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav ul{
+    background-color:#43a286;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+
+}
+nav ul li{
+    display: inline;
+    padding: 20px;
+}
+nav ul li:hover{
+    background-color: #399077;
+}
+section{
+    line-height: 1.5em;
+    font-size:0.9em;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto;
+    color: black;
+
+}
+div{
+    text-align: justify;
+}
+#notes{
+    border-radius: 7px;
+    background-color: yellowgreen;
+    padding:0;
+    margin: 0px;
+}
+img{
+    width: 829px;
+    height: 620px;
+}
+.handle{
+    width: 100%;
+    background-color: #005c48;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: white;
+    display:none;
+}
+
+form{
+   text-align: center;
+    background-color:#aaa;
+    margin: 10px 10px 10px auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+
+}
+@media screen and (max-width:1300px){
+    nav ul{
+        max-width: 0;
+    }
+    .showing{
+        max-height: 20em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 10px;
+        text-align: left;
+    }
+    img{
+        width: 100%
+    }
+    .handle{
+        display: inline-block
+    }
+
+@media screen and (max-width:667px){
+    nav ul{
+        max-width: 0;
+    }
+    .showing{
+        max-height: 20em;
+    }
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 10px;
+        text-align: left;
+    }
+    img{
+        width: 100%
+    }
+    .handle{
+        display: inline-block
+    }
+}
+@media screen and (max-width:480px) {
+    nav ul {
+        max-width: 0;
+    }
+
+    .showing {
+        max-height: 20em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px 10px;
+        text-align: left;
+    }
+
+    .handle {
+        display: inline-block;
+    }
+        img{
+            width: 100%
+        }
+    }
+}
