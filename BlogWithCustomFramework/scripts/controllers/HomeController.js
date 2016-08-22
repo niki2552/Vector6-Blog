@@ -7,6 +7,11 @@
     }
     showGuestPage()
 {
+    let _that = this;
+
+    let recentPosts = [];
+
+    let requestUrl = this._baseServiceUrl + "/appdata/"+ this._appKey + "/posts/";
     this._homeView.showGuestPage();
 }
     showUserPage()
