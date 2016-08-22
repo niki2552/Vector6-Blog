@@ -17,11 +17,11 @@
 
     // Create HomeView, HomeController, UserView, UserController, PostView and PostController
     let homeView = new HomeView(mainContentSelector, selector);
-    let homeController = new HomeController(homeView);
+    let homeController = new HomeController(homeView,requester,baseUrl,appKey);
     let userView = new UserView(mainContentSelector, selector);
-    let userController = new UserController(userView);
+    let userController = new UserController(userView,requester,baseUrl,appKey);
     let postView = new PostView(mainContentSelector,selector);
-    let postController = new PostController(postView);
+    let postController = new PostController(postView,requester,baseUrl,appKey);
 
     initEventServices();
 
