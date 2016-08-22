@@ -9,9 +9,10 @@
 
     //Create AuthorizationService and Requester
     let authService = new AutorizationService(baseUrl, appKey, appSecret, _guestCredentials);
+    authService.initAuthorizationType("Kinvey");
     let requester = new Requester(authService);
 
-    authService.initAuthorizationType("Kinvey");
+    
     let selector = ".wrapper";
     let mainContentSelector = ".main-content";
 
