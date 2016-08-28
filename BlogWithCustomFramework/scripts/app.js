@@ -1,5 +1,5 @@
 (function () {
-
+ 
     // Create your own kinvey application
 
     let baseUrl = "https://baas.kinvey.com";
@@ -8,10 +8,10 @@
     var _guestCredentials = "323bc7bf-db80-42c0-8fa4-1ad81ef9af54.YjBiDZne+Tck10Prt4keDlVKrC6gJKV9VKvAKe8RbUw="; // Create a guest user using PostMan/RESTClient/Fiddler and place his authtoken here...
 
     //Create AuthorizationService and Requester
-    let authService = new AutorizationService(baseUrl, appKey, appSecret, _guestCredentials);
+    let authService = new AuthorizationService(baseUrl, appKey, appSecret, _guestCredentials);
     authService.initAuthorizationType("Kinvey");
     let requester = new Requester(authService);
-
+ 
     
     let selector = ".wrapper";
     let mainContentSelector = ".main-content";
