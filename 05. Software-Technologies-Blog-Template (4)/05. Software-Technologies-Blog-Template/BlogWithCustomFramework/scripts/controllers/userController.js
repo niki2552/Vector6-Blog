@@ -6,14 +6,14 @@ class UserController{
         this._userView = userView;
         this._requester = requester;
         this._appkey = appKey;
-        this._baseServiceUrl = baseUrl;
+        this._baseServiceUrl = baseUrl + "/user/" + appKey + "/";
 
     }
-    showLoginPage(){
-        this._userView.showLoginPage();
+    showLoginPage(isLoggedIn){
+        this._userView.showLoginPage(isLoggedIn);
     }
-    showRegisterPage(){
-        this._userView.showRegisterPage();
+    showRegisterPage(isLoggedIn){
+        this._userView.showRegisterPage(isLoggedIn);
     }
     register(data){
         if(data.username.lenght <6){
@@ -31,10 +31,7 @@ class UserController{
         if(data.password.lenght < 8){
             showPopup('error','Kusa ti e parolata');
         }
-       // let requestData = {
-       //     username:data.username,
-       //     password:data.password,
-       //     fullname:data.fullname};
+
         delete data('confirmPassword');
 
         this._requester.post(this._baseServiceUrl,data,
@@ -47,7 +44,18 @@ class UserController{
         });
     }
     login(data){
-
+        let requestUrl = this._baseServiceUrl + "login";
+     this._requester.post(requestUrl,data,
+         function successCallback(response){
+             sessionStorage.setItem('username', response.username);
+             sessionStorage.setItem('_authToken', response._kmd.authtoken);
+             sessionStorage.setItem('fullName', response.fullname);
+             showPopup('success','Bravo logna se');
+             redirectUrl('#/');
+         },
+         function errorCallback(response){
+             showPopup('error','Pak nishto ne napravi');
+         });
     }
     logout(){
         sessionStorage.clear();

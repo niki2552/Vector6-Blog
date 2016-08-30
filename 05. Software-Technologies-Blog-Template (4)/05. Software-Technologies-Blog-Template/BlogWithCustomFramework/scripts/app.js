@@ -5,7 +5,7 @@
     let baseUrl = "https://baas.kinvey.com";
     let appKey = "kid_r1OME6Oc"; // Place your appKey from Kinvey here...
     let appSecret = "5d0458d8227d4b338b3caa34f946d645"; // Place your appSecret from Kinvey here...
-    var _guestCredentials = "323bc7bf-db80-42c0-8fa4-1ad81ef9af54.YjBiDZne+Tck10Prt4keDlVKrC6gJKV9VKvAKe8RbUw="; // Create a guest user using PostMan/RESTClient/Fiddler and place his authtoken here...
+    var _guestCredentials = "074a6dce-829e-4d98-963f-be9ba752a5fb.pSsGES8pYPlz9QEntbqHrHmZpkpC/KhVmMpljrQ3uwc="; // Create a guest user using PostMan/RESTClient/Fiddler and place his authtoken here...
 
     //Create AuthorizationService and Requester
     let authService = new AuthorizationService(baseUrl,appKey,appSecret, _guestCredentials);
@@ -27,8 +27,10 @@
     initEventServices();
 
     onRoute("#/", function () {
+        console.log('check');
         // Check if user is logged in and if its not show the guest page, otherwise show the user page...
         if(authService.isLoggedIn()){
+            console.log('logna se');
             homeController.showUserPage();
         }
         else
