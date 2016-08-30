@@ -1,5 +1,5 @@
 (function () {
- 
+
     // Create your own kinvey application
 
     let baseUrl = "https://baas.kinvey.com";
@@ -8,33 +8,32 @@
     var _guestCredentials = "323bc7bf-db80-42c0-8fa4-1ad81ef9af54.YjBiDZne+Tck10Prt4keDlVKrC6gJKV9VKvAKe8RbUw="; // Create a guest user using PostMan/RESTClient/Fiddler and place his authtoken here...
 
     //Create AuthorizationService and Requester
-    let authService = new AuthorizationService(baseUrl, appKey, appSecret, _guestCredentials);
-    authService.initAuthorizationType("Kinvey");
+    let authService = new AuthorizationService(baseUrl,appKey,appSecret, _guestCredentials);
     let requester = new Requester(authService);
- 
-    
+
+    authService.initAuthorizationType("Kinvey");
     let selector = ".wrapper";
     let mainContentSelector = ".main-content";
 
     // Create HomeView, HomeController, UserView, UserController, PostView and PostController
-    let homeView = new HomeView(mainContentSelector, selector);
+    let homeView = new HomeView(mainContentSelector,selector);
     let homeController = new HomeController(homeView,requester,baseUrl,appKey);
-    let userView = new UserView(mainContentSelector, selector);
+    
+    let userView = new UserView(mainContentSelector,selector);
     let userController = new UserController(userView,requester,baseUrl,appKey);
+    
     let postView = new PostView(mainContentSelector,selector);
     let postController = new PostController(postView,requester,baseUrl,appKey);
-
     initEventServices();
 
     onRoute("#/", function () {
         // Check if user is logged in and if its not show the guest page, otherwise show the user page...
-        if(authService.isLoggedIn())
-        {
-            homeController.showUserPage()
+        if(authService.isLoggedIn()){
+            homeController.showUserPage();
         }
         else
         {
-            homeController.showUserPage();
+            homeController.showGuestPage();
         }
     });
 
@@ -60,17 +59,17 @@
     onRoute('#/posts/create', function () {
         // Show the new post page...
         let fullName = sessionStorage.getItem('fullName');
-        postController.showCreatePostPage(fullName,authService.isLogedIn());
+        postController.showCreatePostPage(fullName);
     });
 
     bindEventHandler('login', function (ev, data) {
         // Login the user...
-        userController.login();
+        userController.login(data);
     });
 
     bindEventHandler('register', function (ev, data) {
         // Register a new user...
-        userController.register();
+        userController.register(data);
     });
 
     bindEventHandler('createPost', function (ev, data) {
