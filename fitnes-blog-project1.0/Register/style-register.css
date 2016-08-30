@@ -1,0 +1,40 @@
+body{
+    background-image: url("../Register/img-register/brakingWall.jpg") ;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+header{
+   text-align: center;
+}
+div{
+    width:360px;
+    margin: 70px auto;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+div.user-login-block{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border: solid black 1px;
+    border-radius: 10px;
+}
+
+input#pass-confirm{
+    margin-bottom: 30px;
+}
+
+input#username, #password, #full-name, #pass-confirm{
+    text-align: center;
+}
+button{
+    margin-bottom: 10px;
+}
+form{
+    padding: 10px;
+}
+
+a{
+    padding-left: 10px;
+}
