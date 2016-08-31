@@ -4,7 +4,7 @@
 class HomeController {
     constructor(homeView, requester, baseUrl, appKey){
         this._homeView = homeView;
-        this._requester = requester;
+        this.requester = requester;
         this._appkey = appKey;
         this._baseServiceUrl = baseUrl + "/appdata/" + appKey + "/posts";
     }
@@ -12,7 +12,7 @@ class HomeController {
         let _that = this;
 
         let recentPosts = [];
-        this._requester.get(this._baseServiceUrl,function(response) {
+        this.requester.get(this._baseServiceUrl,function(response) {
             showPopup('success', 'Vzeh ti dannite');
             let currentId = 1;
             response.sort(function (elem1, elem2) {
@@ -34,21 +34,25 @@ class HomeController {
     }
     showUserPage() {
         let _that = this;
-
+        console.log('Maika ti');
         let recentPosts = [];
-        this._requester.get(this._baseServiceUrl,function(response) {
+        this.requester.get(this._baseServiceUrl,function(response) {
                 showPopup('success', 'Vzeh ti dannite');
                 let currentId = 1;
+            console.log('pich');
                 response.sort(function (elem1, elem2) {
                     let date1 = new Date(elem1._kmd.ect);
                     let date2 = new Date(elem2._kmd.ect);
                     return date2 - date1;
                 });
+            console.log('pich2');
                 for (let i = 0; i < 5; i++) {
                     response[i].postId = currentId;
                     currentId++;
                     recentPosts.push(response[i]);
+                    console.log('rakia s kiselo zele');
                 }
+            console.log('pich3');
                 _that._homeView.showUserPage(response,recentPosts);
             },
             function(data){

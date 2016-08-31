@@ -211,11 +211,11 @@ header {
     -moz-transition-property: font-weight;
     -moz-transition-duration: 3s;
     -moz-transition-timing-function: linear;
-    -moz-transition-delay: 2.5s;
-    -webkit-transition-property: font-weight;
-    -webkit-transition-duration: 3s;
+    -moz--transition-duration: 3s;
     -webkit-transition-timing-function: linear;
     -webkit-transition-delay: 2.5s;
+    -webkit-transition-property: font-weight;
+    -webkittransition-delay: 2.5s;
     font-weight: 300;
 }
 

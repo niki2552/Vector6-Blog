@@ -35,6 +35,7 @@
         }
         else
         {
+            console.log('pich11');
             homeController.showGuestPage();
         }
     });

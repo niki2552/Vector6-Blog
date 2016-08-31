@@ -11,10 +11,7 @@ class UserView{
      let requestTemplate = isLoggedIn ? 'templates/form-user.html' : 'templates/form-guest.html';
         $.get(requestTemplate,function(template){
             let renderedTemplate = Mustache.render(template,null);
-
-
             $(_that._wrapperSelector).html(renderedTemplate);
-
             $.get('templates/login.html',function(template){
                 let renderedLogin = Mustache.render(template,null);
                 $(_that._mainContentSelector).html(renderedLogin);
@@ -32,7 +29,7 @@ class UserView{
             })
         });
     }
-    showRegisterPage(isLoggedIn){
+    showRegisterPage(){
         
     }
 
