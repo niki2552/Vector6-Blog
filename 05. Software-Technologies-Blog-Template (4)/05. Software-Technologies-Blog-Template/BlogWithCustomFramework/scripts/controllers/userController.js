@@ -43,19 +43,16 @@ class UserController{
             showPopup('error','Pak nishto ne napravi');
         });
     }
-    login(data){
+    login(data) {
         let requestUrl = this._baseServiceUrl + "login";
-     this._requester.post(requestUrl,data,
-         function successCallback(response){
-             sessionStorage.setItem('username', response.username);
-             sessionStorage.setItem('_authToken', response._kmd.authtoken);
-             sessionStorage.setItem('fullName', response.fullname);
-             showPopup('success','Bravo logna se');
-             redirectUrl('#/');
-         },
-         function errorCallback(response){
-             showPopup('error','Pak nishto ne napravi');
-         });
+        this._requester.post(requestUrl, data,
+            function successCallback(response) {
+                showPopup('success', 'Bravo registrira se');
+                redirectUrl('#/');
+            },
+            function errorCallback(response) {
+                showPopup('error', 'Pak nishto ne napravi');
+            });
     }
     logout(){
         sessionStorage.clear();
