@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: #F5F5F5;
+    background-image: url("../images/Supplements/imgSupplements/background-suplements.jpg");
+    background-size: cover;
+}
+header,footer{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+header {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 30px;
+    background-image: url("../images/Supplements/imgSupplements/supplements.jpg");
+    color:  #43a286 ;
+}
+
+nav ul{
+    background-color: #43a286;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    -webkit-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+
+}
+nav ul li{
+    display: inline;
+    padding: 20px;
+    color: white;
+}
+nav ul li:hover{
+    background-color: #399077;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+div.Wrapper{
+    width: 720px;
+    margin: 0 auto;
+}
+
+div.Product{
+    width: 720px;
+    height: 230px;
+    margin-top: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 7px;
+    border-bottom: #399077 solid;
+}
+aside{
+    float: left;
+    margin: 0;
+    size: 220px;
+}
+aside img{
+    margin: 5px;
+    padding: 0px;
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+main{
+    margin-left: 250px;
+}
+main div{
+    padding-left: 15px;
+}
+main h3{
+    text-align: left;
+    font-family: Arial;
+    margin: 25px auto;
+    font-size: 18pt;
+}
+main button{
+    float: left;
+    margin-top: 25px;
+    padding-right: 25px;
+}
+p{
+    margin-top: 15px;
+}
+button{
+    background-color: blue;
+    color: white;
+    margin: auto;
+    padding:5px ;
+}
+button a{
+    padding-left: 15px;
+}
+
+footer{
+    clear: both;
+    color: #fffdfe;
+}
